@@ -1,7 +1,7 @@
 <div class="header" [style.backgroundColor]="backgroundColor ? backgroundColor : 'var(--color-primary)'">
 
   <div class="header__title">
-    <img src="../../../../assets/img/Angular_full_color_logo.svg.png" alt="Logo">
+    <img src="../../../../assets/img/Angular_full_color_logo.svg.png" [routerLink]="['/']" alt="Logo">
     <ng-content select="[title]"></ng-content>
   </div>
 
