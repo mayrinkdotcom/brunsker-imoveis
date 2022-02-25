@@ -5,6 +5,7 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
     component: LandingPageComponent,
   }
 ];
