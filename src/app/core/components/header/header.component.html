@@ -1,1 +1,17 @@
-<p>header works!</p>
+<div class="header" [style.backgroundColor]="backgroundColor ? backgroundColor : 'var(--color-primary)'">
+  <img src="https://source.unsplash.com/random/64x40" alt="Logo">
+
+  <div class="header__title">
+    <ng-content select="[title]"></ng-content>
+  </div>
+
+  <nav class="header__nav">
+    <ul class="header__nav__list">
+      <li *ngFor="let item of navLinks">
+        <a class="header__nav__list--item" [routerLink]="[item.route]" routerLinkActive="router-link-active">{{ item.label }}</a>
+      </li>
+    </ul>
+  </nav>
+
+  <ng-content select="[buttons]"></ng-content>
+</div>
