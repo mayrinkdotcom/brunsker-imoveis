@@ -1,29 +1,49 @@
 .landing-page {
   &__content {
-    height: calc(100vh - 80px - 64px); /* You must set a specified height */
+    height: calc(100vh - 96px - 64px);
 
     background-image: url('../../../assets/img/george-kedenburg-iii-OexDQ_KTuIY-unsplash.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
+
+    @media screen and (min-width: 768px) {
+      height: calc(100vh - 80px - 64px);
+    }
+
     &--text {
-      width: 40%;
-      height: 350px;
-      padding: 24px 32px;
+      width: 100%;
+      height: 200px;
+      padding: 48px 16px 16px;
 
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
+      text-align: center;
 
       color: var(--color-primary);
-      text-shadow: 1px 1px 2px var(--color-primary-shade);
+      text-shadow: 2px 1px 2px var(--color-primary-shade);
+
+      @media screen and (min-width: 768px) {
+        height: 350px;
+        padding: 24px 32px;
+        justify-content: center;
+        width: 40%;
+        height: 350px;
+      }
 
       h1 {
-        font-size: 72px;
+        font-size: 48px;
+        @media screen and (min-width: 768px) {
+          font-size: 72px;
+        }
       }
       h3 {
-        font-size: 32px;
+        font-size: 24px;
+        @media screen and (min-width: 768px) {
+          font-size: 32px;
+        }
       }
     }
   }
@@ -31,10 +51,12 @@
   footer {
     width: 100%;
     height: 64px;
+    padding: 16px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
     background-color: var(--color-secondary-shade);
     color: var(--color-secondary-contrast);
