@@ -9,7 +9,26 @@ export class LandingPageComponent implements OnInit {
 
   constructor() { }
 
+  nav: {
+    label: string,
+    route: string,
+  }[] = [];
+
   ngOnInit(): void {
+    this.nav = [
+      {
+        label: "Gerenciar imóveis",
+        route: "/gerenciar-imoveis"
+      },
+      {
+        label: "Buscar imóveis",
+        route: "/buscar-imoveis"
+      },
+      {
+        label: "Sobre nós",
+        route: "/sobre-nos"
+      },
+    ]
   }
 
 }

@@ -1,0 +1,42 @@
+.landing-page {
+  &__content {
+    height: calc(100vh - 80px - 64px); /* You must set a specified height */
+
+    background-image: url('../../../assets/img/george-kedenburg-iii-OexDQ_KTuIY-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &--text {
+      width: 40%;
+      height: 350px;
+      padding: 24px 32px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      color: var(--color-primary);
+      text-shadow: 1px 1px 2px var(--color-primary-shade);
+
+      h1 {
+        font-size: 72px;
+      }
+      h3 {
+        font-size: 32px;
+      }
+    }
+  }
+
+  footer {
+    width: 100%;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-secondary-shade);
+    color: var(--color-secondary-contrast);
+  }
+}
