@@ -3,7 +3,11 @@
 </app-header>
 
 <div class="page-content">
-  <p>manage-properties works!</p>
+
+  <div class="card" *ngFor="let item of properties">
+    <p>Nome: {{item.name}}</p>
+  </div>
+
 </div>
 
 <app-footer></app-footer>
