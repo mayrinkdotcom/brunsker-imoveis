@@ -1,0 +1,42 @@
+.add-property {
+  width: 100%;
+}
+
+.properties-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3%;
+
+  width: 100%;
+  padding: 4px 8px;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 8px 24px;
+  }
+
+
+  &__card {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+
+    position: relative;
+    border: 1px solid var(--color-light-shade);
+    border-radius: 16px;
+
+    @media screen and (min-width: 768px) {
+    //  width: 30%;
+      padding: 16px;
+    }
+
+    &--edit button {
+      width: 24px;
+      height: 24px;
+      border: none;
+
+      position: absolute;
+      top: -5px;
+      right: -5px;
+    }
+  }
+}

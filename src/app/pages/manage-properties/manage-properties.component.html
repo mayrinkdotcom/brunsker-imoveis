@@ -3,10 +3,25 @@
 </app-header>
 
 <div class="page-content">
-
-  <div class="card" *ngFor="let item of properties">
-    <p>Nome: {{item.name}}</p>
+  <div class="add-property">
+    <button>
+      Adicionar registro
+    </button>
   </div>
+
+  <div class="properties-list">
+    <div class="properties-list__card" *ngFor="let item of properties">
+      <p><b>Nome:</b> {{item.nome ? item.nome : 'Desconhecido'}}</p>
+      <p><b>Tipo:</b> {{item.tipo ? item.tipo : 'Desconhecido'}}</p>
+      <p><b>Valor:</b> {{item.valor ? item.valor : 'Desconhecido'}}</p>
+      <p><b>Endereço:</b> {{item.endereco ? item.endereco : 'Desconhecido'}}</p>
+      <p><i>{{item.dataAnuncio ? item.dataAnuncio : 'Desconhecido'}}</i></p>
+      <div class="properties-list__card--edit">
+        <button>editar</button>
+      </div>
+    </div>
+  </div>
+
 
 </div>
 
