@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({providedIn: 'root'})
@@ -11,15 +12,27 @@ export class PropertiesService {
   ) { }
 
 
-  public async getAllProperties(): Promise<any> {
-    const url = `${environment.BASE_URL}`;
-    const headers = new HttpHeaders();
+  public getAllProperties(): Observable<any> {
+    const url = `${environment.BASE_URL}/imovel`;
+    const headers = new HttpHeaders({
+      path: 'imovel'
+    });
 
-    const response = await this.httpClient
-    .get<any>(url, { headers })
-    .toPromise();
+    return this.httpClient.get<any>( url, { headers });
+  }
 
-    return response;
+  public create(): Observable<any> {
+    const url = `${environment.BASE_URL}/imovel`;
+    const headers = new HttpHeaders({
+      Authorization: ''
+    });
+
+    const body = {
+      name: 'Teste',
+      value: 42
+    };
+
+    return this.httpClient.post<any>(url, body, { headers });
   }
 
 }
