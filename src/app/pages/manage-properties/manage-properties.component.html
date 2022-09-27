@@ -22,6 +22,10 @@
     </div>
   </div>
 
+  <ng-container *ngIf="loading == false && properties.length == 0">
+    Ainda não há imóveis a serem exibidos.
+  </ng-container>
+
 
 </div>
 
